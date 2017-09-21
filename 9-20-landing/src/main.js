@@ -23,7 +23,7 @@ Vue.use(VueResource);
 // 并且配置路由规则
 const router = new VueRouter({
   //在创建的 router 对象中，如果不配置 mode，就会使用默认的 hash 模式，该模式下会将路径格式化为 #! 开头
-  mode: 'history',
+  // mode: 'history',
   base: __dirname,
   routes: [
     {

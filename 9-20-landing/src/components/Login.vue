@@ -48,20 +48,22 @@ import authSrv from '../api/auth.js'
 			},
 			login(){
 				const {name,pwd,$router}=this;
-				if (!this.check(name,pwd))return
-					authSrv
-					.login(this,name,pwd)
-					.then(rep => {
-						if (!rep.code) {
-							this.$router.push({
-						path:'./Main'
-							});
-						}else{
-							alert('用户名密码错误');
-						}
-					})
-				
-			}
+				if (!this.check(name,pwd))return;
+					// authSrv
+					// .login(this,name,pwd)
+					// .then(rep => {
+					// 	if (!rep.code) {
+					// 		this.$router.push({
+					// 	path:'./Main'
+					// 		});
+					// 	}else{
+					// 		alert('用户名密码错误');
+					// 	}
+					// })
+					if(name == 'admin' && pwd == 123){
+						this.$router.push({path:'./Main'});
+					}
+					}
 		}
 	}
 </script>
